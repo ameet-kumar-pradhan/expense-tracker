@@ -1,0 +1,46 @@
+html {
+    box-sizing: border-box;
+    /* background:url(money.jpg) center no-repeat; */
+    background-size:cover;
+    min-height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    font-family: 'Open Sans', sans-serif;
+  }
+  *, *:before, *:after {box-sizing: inherit; }
+
+
+svg {
+    fill:white;
+    /* background: rgba(0,0,0,0.1); */
+    /* padding: 20px; */
+    /* border-radius: 50%; */
+    width:200px;
+    /* margin-bottom: 50px; */
+    height: 290px;
+  }
+
+  .container {
+    padding: 20px;
+    max-width: 100%;
+    background: rgba(255,255,255,0.95);
+    box-shadow: 0 0 0 10px rgba(0,0,0,0.1);
+  }
+
+.form-row {
+  padding: 10px 0;
+  display: flex;
+  }
+
+.form-row input {
+  flex-direction: column;
+}
+input.item {
+  text-align: left;
+}
+
+input.amount {
+  text-align: right;
+}
