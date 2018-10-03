@@ -37,10 +37,6 @@ svg {
 .form-row input {
   flex-direction: column;
 }
-input.item {
-  text-align: left;
-}
 
-input.amount {
-  text-align: right;
-}
+
+

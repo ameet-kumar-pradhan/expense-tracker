@@ -1,9 +1,10 @@
 const formitems = document.querySelector('.add-items');
 const itemList = document.querySelector('.expense')
-const items = JSON.parse(localStorage.getItem('items')) || [];
+let items = JSON.parse(localStorage.getItem('items')) || [];
 // <!--empty array to store items-->
-const amount = JSON.parse(localStorage.getItem('amount')) || [];
+let amount = JSON.parse(localStorage.getItem('amount')) || [];
 // <!-- empty array for amount-->
+const clearButton = document.querySelector('.clear');
 
 
 function addExpense(e) {
@@ -36,6 +37,15 @@ function populateList(plates = [], platesList) {
         }).join('');
 }
 
+function clearAll() {
+        localStorage.clear();
+        items = [];
+        amount = [];
+        populateList(items, itemList);
+        populateList(amount, itemList);
+}
+
 formitems.addEventListener('submit', addExpense);
+clearButton.addEventListener('click', clearAll);
 populateList(items, itemList);
-// populateList(amount, itemList);
+populateList(amount, itemList);
